@@ -1,2 +1,2 @@
 #!/bin/sh
-exec python3.9 -u raft11.py $1 $2
+exec python3.9 -u raft.py $1 $2
