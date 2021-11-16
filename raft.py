@@ -123,7 +123,7 @@ class StateMachine(object):
                     # if quorum exceeds half, can be selected as leader
                     #   -> state -> LEADER  -> send STATE
                     #   -> send AppendEntries
-                    if self.quorum > total // 2 + 1:
+                    if self.quorum >=total // 2 + 1:
                         self.state = StateType.LEADER
                         print(f'STATE state="{self.state.name}"', flush=True)
                         print(f'STATE leader="{pid}"', flush=True)
